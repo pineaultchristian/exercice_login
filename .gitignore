@@ -1,0 +1,6 @@
+/config/
+/deployment.xml
+/deployment.properties
+/.*
+!/.gitignore
+
