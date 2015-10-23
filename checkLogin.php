@@ -53,7 +53,4 @@ function getFirstName ($user) {
     
 }
 
-login('andrewcaya', 'password3');
-getFirstname('christianpineault');
-
 ?>
