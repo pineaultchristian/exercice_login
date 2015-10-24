@@ -48,7 +48,6 @@ function getFirstName ($user) {
     
     $realname = $result[0];
     
-    var_dump($realname);
     return $realname;
     
 }
