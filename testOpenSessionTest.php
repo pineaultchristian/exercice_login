@@ -1,28 +1,46 @@
 <?php
 
 require_once 'openSession.php';
-
-$user = 'martinbeaudry';
+require_once 'closeSession.php';
 
 createSession();
 
-if (checkCookie($user)) {
+if (checkCookie()) {
+    
+    /*In case of a positive response, the controller should
+     * bring the user to the first page of the Website to
+     * which the session has been opened with a header function
+     * like the one below.
+     */
+    
+    //header ("Location: <sessionOuverte.php>");
     echo 'Cookies are enabled in your browser.';
 }
 
 else {
     
-    /*Dans le code du middle, en cas de réponse négative, il faudra
-    renvoyer l'utilisateur à une page l'informant que les cookies
-    sont désactivés (en appelant la fonction header() comme je le 
-    fais ci-dessous, et en remplaçant <404.html> par un vrai fichier
-    donnant cette information), appeler la fonction closeSession(), puis renvoyer
-    l'utilisateur à la page d'authentification pour qu'il se réauthentifie,
-    cette fois avec les cookies activés. */
-    header ("Location: <404.html>");
-    echo 'Cookies are disabled in your browser.' . PHP_EOL;
+    /*In case of a negative response, the controller should bring
+    the user to a page informing him/her that cookies are disabled
+    in his browser (with the help of a header() function like the one 
+    below), call the closeSession() function, then bring the user back
+    to the authentification page so he can open a session with cookies
+    enabled. */
+    //header ("Location: <cookieDesactive>");
+    echo 'Cookies are disabled in your browser.';
 }
 
-var_dump ($_COOKIE);
+closeSession();
+
+/*More complete solution to check cookies 
+ * proposed by Nathan Long from Stack Overflow :
+ * if (isset($_SERVER['HTTP_COOKIE'])) {
+ * $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+ * foreach($cookies as $cookie) {
+ * $parts = explode('=', $cookie);
+ * $name = trim($parts[0]);
+ * setcookie($name, '', time()-1000);
+ * setcookie($name, '', time()-1000, '/');
+ * }
+ */
 
 ?>
