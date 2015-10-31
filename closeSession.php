@@ -1,10 +1,8 @@
 <?php
 
 function closeSession() {
-    
-    if(isset($_SESSION)) {
         
-        //Method from the PHP manual for session_destroy
+        //Method from the PHP manual for session_destroy()
         
         // Unset all of the session variables.
         $_SESSION = array();
@@ -19,5 +17,5 @@ function closeSession() {
         
         //Return the user to the login page
         header ("Location: homeLogin.php");
-    }
+
 }

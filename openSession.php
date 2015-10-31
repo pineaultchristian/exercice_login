@@ -7,7 +7,7 @@ function createSession() {
     
 }
 
-function checkCookie() {
+function checkCookie($user) {
       
     // Set test cookie
     setcookie ('test', 'test', time() + 60*60);
