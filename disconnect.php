@@ -1,8 +1,6 @@
-<?php
+<?php 
 
-function closeSession() {
-    
-    if(isset($_SESSION)) {
+
         
         //Method from the PHP manual for session_destroy
         
@@ -19,5 +17,6 @@ function closeSession() {
         
         //Return the user to the login page
         header ("Location: homeLogin.php");
-    }
-}
+
+
+?>
