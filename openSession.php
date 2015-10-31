@@ -7,34 +7,31 @@ function createSession() {
     
 }
 
-function checkCookie() {
+function checkCookie($user) {
+      
+    // Set test cookie
+    setcookie ('test', 'test', time() + 60*60);
+        
+    // Reload page
+    header("Refresh:0");
     
-    // Check if test cookie has been set
-    if ($_GET['set'] != 'yes') {
-    
-        // Set test cookie
-        setcookie ('test', 'test', time() + 60*60);
-    
-        // Reload page
-        header ("Location: testOpenSessionTest.php?set=yes");
-    
+    // Check if the client returns us the cookie we just set.
+    if(count($_COOKIE) > 0) {
+        
+        //Delete test cookie
+        setcookie('test', 'test', time() - 42000);
+        
+        //Cookies are enabled. We can now delete the test cookie.
+        return TRUE;
     }
     
     else {
-    
-        // Check if the client returns us the cookie we just set.
-        if (isset($_COOKIE['test'])) {
-            
-            //Cookies are enabled. We can now delete the test cookie.
-            setcookie('test', 'test', time() - 42000);
-            
-            return TRUE;
-        }
         
-        else {
-            //Cookies are disabled.
-            return FALSE;
-        }
+        //Delete test cookie.
+        setcookie('test', 'test', time() - 42000);
+        
+        //Cookies are disabled.
+        return FALSE;
     }
 }
 
