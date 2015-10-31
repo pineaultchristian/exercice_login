@@ -11,17 +11,17 @@ function checkCookie($user) {
       
     // Set test cookie
     setcookie ('test', 'test', time() + 60*60);
-        
+    
     // Reload page
     header("Refresh:0");
     
     // Check if the client returns us the cookie we just set.
     if(count($_COOKIE) > 0) {
         
-        //Delete test cookie
+        //Delete test cookie.
         setcookie('test', 'test', time() - 42000);
         
-        //Cookies are enabled. We can now delete the test cookie.
+        //Cookies are enabled.
         return TRUE;
     }
     

@@ -5,7 +5,9 @@ require_once 'closeSession.php';
 
 createSession();
 
-if (checkCookie()) {
+$user = 'martinbeaudry';
+
+if (checkCookie($user)) {
     
     /*In case of a positive response, the controller should
      * bring the user to the first page of the Website to
