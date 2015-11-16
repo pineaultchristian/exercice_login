@@ -1,23 +1,23 @@
 <?php 
 
-require_once 'homeLogin.php';
-require_once 'openSession.php';
-require_once 'closeSession.php';
-require_once 'checkLogin.php';
+require_once 'frontHomeLogin.php';
+require_once 'backOpenSession.php';
+require_once 'backCloseSession.php';
+require_once 'backCheckLogin.php';
 
 manageLogin();
 
 function manageLogin() {
     
-    $user = $_POST["username"];
-    $password = $_POST["password"];
+    $user = (string) $_POST["username"];
+    $password = (string) $_POST["password"];
     
     if (checkLogin($user, $password)) {
         
         createSession();
         
         if (checkCookie()) {
-            header ("Location: login1.php");
+            header ("Location: frontLogin1.php");
         }
         
         else {
@@ -29,5 +29,4 @@ function manageLogin() {
         echo 'Username and/or password incorrect. Please try again.';
     }
 }
-
-?>
+ ?>

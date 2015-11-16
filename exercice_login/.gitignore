@@ -1,0 +1,6 @@
+/dbconfig/
+/deployment.xml
+/deployment.properties
+/.*
+!/.gitignore
+
