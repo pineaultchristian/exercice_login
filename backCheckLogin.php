@@ -48,7 +48,7 @@ function getFirstName ($user) {
     $realname = mysqli_query($conn, "SELECT firstname FROM users 
         WHERE users.username = '$user'");
     
-    //Get the result
+    //Get the result, then compare with the password given by the user
     $result = mysqli_fetch_array($realname);
     
     $realname = $result[0];
@@ -58,4 +58,3 @@ function getFirstName ($user) {
 }
 
 ?>
-
