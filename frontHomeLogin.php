@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html  lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -15,14 +15,23 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-        
-        <h1>Please Login.</h1>
-        <form action="middleLogin.php" method="post">
-            Username: <input type="text" name="username"><br>
-            Password: <input type="password" name="password"><br>
-            <input type="submit">
-        </form>
-        <p>Cookies need to be enabled in your browser to login.</p>
+        <div class="main-container">
+            <div class="form-container">
+                <h1>Please Login</h1>
+                <form action="middleLogin.php" method="post">
+                    <ul class='form-list'>
+                        <li class='sliding-middle-out'>
+                            <input  type="text" name="username" placeholder='Username' required>
+                        </li>
+                        <li class='sliding-middle-out'>
+                            <input  type="password" name="password" placeholder='Password' required>
+                        </li>
+                    </ul>
+                    <input type="submit">
+                </form>
+                <p>Cookies need to be enabled in your browser to login.</p>
+            </div>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>

@@ -95,15 +95,262 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html { 
+  width: 100%;
+  height: 100%;
+  /* background: url('../img/El-Capitan-Mac.jpg') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;*/
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+     
+}
+
+.main-container{
+    position: fixed;
+     background: url('../img/El-Capitan-Mac.jpg') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.form-container {
+   position:relative;
+   left:50%;
+   margin-left:-400px;
+   top:50%;
+   margin-top:-150px;
+   width:800px;
+   height:300px;
+}
+h1 {
+    color: white;
+    display: block;
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
+p {
+    color: white;
+    margin: 7px 0px;
+}
+
+/****************************************************
+    form
+****************************************************/
+
+/******disabling default focus***********/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+form {
+    border: 2px solid white;
+    color: white;
+    width: 800px;
+    height: 300px;
+    text-align: center;
+   /* box-shadow: 1px 1px 1px 1px #000;*/
+    display: table-cell;
+    vertical-align: middle;
+}
+.form-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.form-list li {
+    display: inline-block;
+    padding: 20px;
+}
+input{
+    background: transparent;
+    display: inline-block;
+    border: none;
+    width: 250px;
+    border-bottom: 1px solid #222;
+    color: white;
+}
+input:focus { border-bottom: 1px solid white;}
+input:valid { border-bottom: 1px solid white;}
+input[type=submit]{
+    background: transparent;
+    border:1px solid white;
+    text-shadow: 1px 1px 1px black;
+    position: absolute;
+    bottom: 50px;
+    width: 64px;
+    left: 50%;
+    margin-left: -32px;
+}
+::-webkit-input-placeholder {
+   color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+:-ms-input-placeholder {  
+   color: white;  
+}
+/****************************************************
+    underline effect
+****************************************************/
+.sliding-middle-out {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 1px;
+}
+.sliding-middle-out:after {
+    content: '';
+    display: block;
+    position: relative;
+    top: -1px;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+    width: 100%;
+    background: white;
+}
 
 
+/* ==========================================================================
+  welcome page
+   ========================================================================== */
+
+.mainContainer {
+    display: table;
+}
+.section1 {
+    display: table-cell;
+    vertical-align: middle;
+}
+.content{
+    text-align: center;
+}
+.content h1 {
+    font-size: 30px;
+    color: white;
+}
+.content p {
+    font-size: 16px;
+    color: white;
+}
 
 
+/* ==========================================================================
+    General
+   ========================================================================== */
+  a {
+    color: blue;
+    background: white;
+    text-decoration: none;
+    margin: 20px;
+}
+    
+a:hover {
+    color: blue;
+    background: white;
+    text-shadow: none;
+    border: none;
+    border-radius: 2px;
+}
 
+/*********************************************
+ * ROLLING LINKS
+ *********************************************/
 
+.roll {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
 
+    -webkit-perspective: 300px;
+       -moz-perspective: 300px;
+        -ms-perspective: 300px;
+            perspective: 300px;
 
+    -webkit-perspective-origin: 50% 50%;
+       -moz-perspective-origin: 50% 50%;
+        -ms-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+}
+.roll:hover {
+    background: none;
+    text-shadow: none;
+}
+.roll span {
+    display: block;
+    position: relative;
+    padding: 0 2px;
+    pointer-events: none;
 
+    -webkit-transition: all 600ms ease;
+       -moz-transition: all 400ms ease;
+        -ms-transition: all 400ms ease;
+            transition: all 400ms ease;
+    
+    -webkit-transform-origin: 50% 0%;
+       -moz-transform-origin: 50% 0%;
+        -ms-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+.roll:hover span {
+    background: white;
+
+    -webkit-transform: translate3d( 0px, 0px, -55px ) rotateX( 90deg );
+       -moz-transform: translate3d( 0px, 0px, -55px ) rotateX( 90deg );
+        -ms-transform: translate3d( 0px, 0px, -55px ) rotateX( 90deg );
+            transform: translate3d( 0px, 0px, -55px ) rotateX( 90deg );
+}
+.roll span:after {
+    content: attr(data-title);
+
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1px 2px;
+    white-space: nowrap;
+
+    color: blue;
+    background: white; 
+
+    -webkit-transform-origin: 50% 0%;
+       -moz-transform-origin: 50% 0%;
+        -ms-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+
+    -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+       -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+        -ms-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+            transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+}
 
 
 
