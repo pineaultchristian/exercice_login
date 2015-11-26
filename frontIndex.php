@@ -17,11 +17,11 @@
     <body>
        
 
-            <ul>
+            <!-- <ul>
               <li><a href="<?php echo $_SERVER['PHP_SELF'];?>">Home</a></li>
               <li><a href="<?php echo $_SERVER['PHP_SELF'];?>?page=frontpage1">Page One</a></li>
               <li><a href="<?php echo $_SERVER['PHP_SELF'];?>?page=frontpage2">Page Two</a></li>
-          </ul>  
+          </ul>   -->
             <!-- dynamic content start here -->
             <div class="content">
                 <?php
