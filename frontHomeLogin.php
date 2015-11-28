@@ -1,15 +1,53 @@
+<!doctype html>
+<html  lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<html>
-<body>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
 
-<form action="middleLogin.php" method="post">
-Username: <input type="text" name="username"><br>
-Password: <input type="password" name="password"><br>
-<input type="submit">
-</form>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="form-container">
+                <h1>Please Login</h1>
+                <form action="middleLogin.php" method="post">
+                    <ul class='form-list'>
+                        <li class='sliding-middle-out'>
+                            <input  type="text" name="username" placeholder='Username' required>
+                        </li>
+                        <li class='sliding-middle-out'>
+                            <input  type="password" name="password" placeholder='Password' required>
+                        </li>
+                    </ul>
+                    <input type="submit">
+                </form>
+                <p>Cookies need to be enabled in your browser to login.</p>
+            </div>
+        </div>
 
-</body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
 </html>
-<?php 
-echo 'Cookies need to be enabled in your browser to login.';
-?>
+
+
