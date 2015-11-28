@@ -25,7 +25,7 @@
             <!-- dynamic content start here -->
             <div class="content">
                 <?php
-            $username = 'Jack';
+            $username = $_COOKIE['userName'];
 
 
   // create an array of allowed pages
