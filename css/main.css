@@ -321,6 +321,19 @@ input[type=submit]{
     background: blue;
     width: 100%;
 }
+/*********************************
+outing links
+**********************************/
+.outing {
+    margin: 20px;
+}
+.outing .link-button {
+    margin: 0;
+}
+.outing .roll span:after{
+    background: red;
+    color: black;
+}
 
 
 /* ==========================================================================
