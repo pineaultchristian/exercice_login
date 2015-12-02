@@ -29,6 +29,7 @@ function manageLogin() {
     }
     
     else {
+        
         echo 'Username and/or password incorrect. Please try again.';
     }
 }
