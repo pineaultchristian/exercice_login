@@ -1,5 +1,7 @@
 <?php
+
 closeSession();
+
 function closeSession() {
     //Method from the PHP manual for session_destroy()
     
