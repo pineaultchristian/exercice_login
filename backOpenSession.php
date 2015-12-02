@@ -5,7 +5,7 @@ function createSession($user) {
     //Open session
     session_start();
     
-    setcookie ('user', $user, time() + 60*60);
+    setcookie ('userName', $user, time() + 60*60);
     
     if (!isset($_SESSION['count'])) {
         $_SESSION['count'] = 0;
@@ -31,16 +31,10 @@ function checkCookie($user) {
         //Delete test cookie
         setcookie('test', 'test', time() - 42000);
         
-        //Cookies are enabled. We can now delete the test cookie.
         return TRUE;
     }
     
     else {
-        
-        //Delete test cookie.
-        setcookie('test', 'test', time() - 42000);
-        
-        //Cookies are disabled.
         return FALSE;
     }
 }

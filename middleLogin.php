@@ -9,17 +9,18 @@ manageLogin();
 
 function manageLogin() {
     
+    
     $user = (string) $_POST["username"];
     $password = (string) $_POST["password"];
     
     if (checkLogin($user, $password)) {
-        
+
         $user = getFirstName($user);
         
         createSession($user);
         
         if (checkCookie()) {
-            header ("Location: frontLogin1.php");
+            header ("Location: frontIndex.php");
         }
         
         else {
@@ -28,6 +29,7 @@ function manageLogin() {
     }
     
     else {
+        
         echo 'Username and/or password incorrect. Please try again.';
     }
 }
