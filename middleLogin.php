@@ -9,6 +9,7 @@ manageLogin();
 
 function manageLogin() {
     
+    
     $user = (string) $_POST["username"];
     $password = (string) $_POST["password"];
     
@@ -17,7 +18,7 @@ function manageLogin() {
         createSession();
         
         if (checkCookie()) {
-            header ("Location: frontLogin1.php");
+            header ("Location: frontIndex.php");
         }
         
         else {

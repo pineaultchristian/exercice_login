@@ -18,7 +18,7 @@
             <p>Not much to see I know but still prettier then the previous version right?</p>
             <a class='link-button roll' href="<?php echo $_SERVER['PHP_SELF'];?>?page=frontpage2"><span data-title='Go to the second page?'>Go to the second page?</span></a>
             <a class='link-button roll' href="<?php echo $_SERVER['PHP_SELF'];?>"><span data-title='Back to home?'>Back to home?</span></a>
-            <p class="outing">Or you could always <a class='link-button roll' href="../backCloseSessions.php"><span data-title='GET OUT!!!'>GET OUT!!!</span></a></p>
+            <p class="outing">Or you could always <a class='link-button roll' href="backCloseSession.php"><span data-title='GET OUT!!!'>GET OUT!!!</span></a></p>
         </div>
     </div> 
 </div>
