@@ -19,5 +19,5 @@ function closeSession() {
     session_unset();
         
     //Return the user to the login page
-    header ("Location: frontHomeLogin.php");
+    header ("Location: homelogin.php");
 }
