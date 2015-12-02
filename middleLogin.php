@@ -14,7 +14,9 @@ function manageLogin() {
     
     if (checkLogin($user, $password)) {
         
-        createSession();
+        $user = getFirstName($user);
+        
+        createSession($user);
         
         if (checkCookie()) {
             header ("Location: frontLogin1.php");

@@ -1,9 +1,11 @@
 <?php
 
-function createSession() {
+function createSession($user) {
 
     //Open session
     session_start();
+    
+    setcookie ('user', $user, time() + 60*60);
     
     if (!isset($_SESSION['count'])) {
         $_SESSION['count'] = 0;
