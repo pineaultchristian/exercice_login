@@ -328,7 +328,8 @@ outing links
     margin: 20px;
 }
 .outing .link-button {
-    margin: 0;
+    margin: -4px 0 0;
+
 }
 .outing .roll span:after{
     background: red;
