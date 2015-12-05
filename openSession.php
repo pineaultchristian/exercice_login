@@ -17,7 +17,7 @@ function createSession($user) {
     
 }
 
-function checkCookie($user) {
+function checkCookie() {
       
     // Set test cookie
     setcookie ('test', 'test', time() + 60*60);
@@ -35,8 +35,11 @@ function checkCookie($user) {
     }
     
     else {
+        
         return FALSE;
+        
     }
+    
 }
 
 ?>

@@ -13,6 +13,9 @@ function closeSession() {
     setcookie(session_name(), '', time() - 42000, $params['path'], 
         $params['domain'], $params['secure'], isset($params['httponly']));
     
+    //Delete the cookie with the user's first name
+    setcookie('userName', '', time() - 42000);
+    
     //close session
     session_destroy();
     

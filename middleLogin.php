@@ -1,45 +1,52 @@
 <?php 
 
-require_once 'homelogin.php';
 require_once 'openSession.php';
 require_once 'closeSession.php';
 require_once 'checkLogin.php';
+require_once 'validRegex.php';
 
-manageLogin();
+ob_start();
 
-function manageLogin() {
-    
-    //Put the data given by the user in a variable
-    $user = (string) $_POST["username"];
-    $password = (string) $_POST["password"];
-    
-    //Check if username and password are correct
-    if (checkLogin($user, $password)) {
+$user = $_POST['user'];
+$password = $_POST['password'];
 
-        //Get the real first name of the user
-        $user = getFirstName($user);
+    if ((empty($_POST['user'])) || (empty($_POST['password']))) {
+        //$error = 'Erreur de connexion : Vous devez remplir tous les champs.';
         
-        //Open a session with the first name as argument to create the cookie
-        createSession($user);
+        header("Location: error.php");
+    }
+
+    elseif (!checkUser($user)) {
+        //$error = 'Erreur de connexion : caractère illégal dans le nom d\'utilisateur.';
         
-        //Check if browser accepts cookies
+        header("Location: error.php");
+    }
+    
+    elseif (!checkPassword($password)) {
+        //$error = 'Erreur de connexion : caractère illégal dans le mot de passe.';
+        
+        header("Location: error.php");
+    }
+    
+    elseif (!checkLogin($user,$password)) {
+        //$error = 'Mauvais nom d\'utilisateur ou mot de passe';
+        
+        header("Location: error.php");
+    }
+    
+    else {
+        
         if (checkCookie()) {
-            
-            //If it does, all is well and we go to the first page
+        
+            $nameforcookie = getFirstName($user);
+            createSession($nameforcookie);
             header ("Location: index.php");
         }
         
         else {
-            //Otherwise, the session can't open, so we clean everything up.
             closeSession();
         }
     }
     
-    else {
-        //TODO: find a way to display error message to user.
-        
-        //The username or password is not correct.
-        echo 'Username and/or password incorrect. Please try again.';
-    }
-}
- ?>
+ob_flush();
+?>

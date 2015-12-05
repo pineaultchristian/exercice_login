@@ -1,7 +1,7 @@
 <?php 
 
     if (!isset($_COOKIE['PHPSESSID'])) {
-        header ("Location: frontHomeLogin.php");
+        header ("Location: homelogin.php");
     }
 
     session_name($_COOKIE['PHPSESSID']);

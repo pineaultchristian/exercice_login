@@ -1,6 +1,6 @@
 <?php 
     if (!isset($_COOKIE['PHPSESSID'])) {
-        header ("Location: frontHomeLogin.php");
+        header ("Location: homelogin.php");
     }
 
     session_name($_COOKIE['PHPSESSID']);
@@ -11,7 +11,7 @@
 <div class="main-container home">
     <div class="home-container">
         <div class="content">
-            <h1>Congratulation <?php echo $username ?> you are in!</h1>
+            <h1>Congratulations <?php echo $username ?> you are in!</h1>
             <p>We have a couple of pages for you. By a couple I really mean a couple... Two pages.</p>
             <a class='link-button roll' href="<?php echo $_SERVER['PHP_SELF'];?>?page=frontpage1"><span data-title='Page 1'>Page 1</span></a>
            <a class='link-button roll' href="<?php echo $_SERVER['PHP_SELF'];?>?page=frontpage2"><span data-title='Page 2'>Page 2</span></a>

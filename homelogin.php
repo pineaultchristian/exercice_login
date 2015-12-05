@@ -18,7 +18,7 @@
                     <form action="middleLogin.php" method="post">
                         <ul class='form-list'>
                             <li class='sliding-middle-out'>
-                            	<input type="text" name="username" placeholder='Username' required>
+                            	<input type="text" name="user" placeholder='Username' required>
 							</li>
                             <li class='sliding-middle-out'>
                             	<input type="password" name="password" placeholder='Password' required>
@@ -27,7 +27,7 @@
                         <input type="submit">
                     </form>
        	            <p>Cookies need to be enabled in your browser to login.</p>
+       	            <p>Allowed characters: numbers, letters and underscores.</p>
 			</div>
 		</div>
 	</body>
-</html>
