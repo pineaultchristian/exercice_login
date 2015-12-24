@@ -17,8 +17,8 @@
     <body>
         <div class="main-container">
             <div class="form-container">
-                <h1>Please Login</h1>
                 <form action="middleLogin.php" method="post">
+                    <h1>Please Login</h1>
                     <ul class='form-list'>
                         <li class='sliding-middle-out'>
                             <input  type="text" name="username" placeholder='Username' required>
@@ -28,8 +28,8 @@
                         </li>
                     </ul>
                     <input type="submit">
+                    <p class='warning'>Cookies need to be enabled in your browser to login.</p>
                 </form>
-                <p>Cookies need to be enabled in your browser to login.</p>
             </div>
         </div>
 
