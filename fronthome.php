@@ -1,10 +1,9 @@
 <?php 
-    if (!isset($_COOKIE['PHPSESSID'])) {
-        header ("Location: homelogin.php");
-    }
 
-    session_name($_COOKIE['PHPSESSID']);
-    session_start();
+    if (!isset($_SESSION["user"])) {
+        header ("Location: closeSession.php");
+    }
+    
     session_regenerate_id();
 ?>
 

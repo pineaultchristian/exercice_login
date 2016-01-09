@@ -36,16 +36,9 @@ $password = $_POST['password'];
     
     else {
         
-        if (checkCookie()) {
+        createSession(getFirstName($user));
+        header ("Location: index.php");
         
-            $nameforcookie = getFirstName($user);
-            createSession($nameforcookie);
-            header ("Location: index.php");
-        }
-        
-        else {
-            closeSession();
-        }
     }
     
 ob_flush();

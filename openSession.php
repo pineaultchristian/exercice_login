@@ -7,6 +7,9 @@ function createSession($user) {
     
     setcookie ('userName', $user, time() + 60*60);
     
+    $_SESSION["user"] = $user;
+    
+    /*
     if (!isset($_SESSION['count'])) {
         $_SESSION['count'] = 0;
     } 
@@ -14,7 +17,7 @@ function createSession($user) {
     else {
         $_SESSION['count']++;
     }
-    
+    */
 }
 
 function checkCookie() {

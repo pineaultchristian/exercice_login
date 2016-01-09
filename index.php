@@ -1,3 +1,11 @@
+<?php
+
+    session_start();
+    
+    $username = $_SESSION["user"];
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -22,8 +30,6 @@
         <div class="content">
 
 <?php
-    
-    $username = $_COOKIE['userName'];
     
     // create an array of allowed pages
     $allowedPages = array('frontpage1', 'frontpage2');
