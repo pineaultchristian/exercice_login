@@ -114,6 +114,7 @@ body {
 
 .main-container{
     position: fixed;
+    display: table;
      background: url('../img/El-Capitan-Mac.jpg') no-repeat center center fixed; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -124,17 +125,18 @@ body {
 }
 .form-container {
    position:relative;
-   left:50%;
+   display: table-cell;
+   vertical-align: middle;
+   /*left:50%;
    margin-left:-400px;
    top:50%;
-   margin-top:-150px;
+   margin-top:-150px;*/
    width:800px;
    height:300px;
 }
 h1 {
     color: white;
     display: block;
-    position: absolute;
     top: 7px;
     width: 100%;
     text-align: center;
@@ -160,13 +162,15 @@ button:focus {
 
 form {
     border: 2px solid white;
+    position: relative;
     color: white;
     width: 800px;
     height: 300px;
     text-align: center;
+    margin: 0 auto;
    /* box-shadow: 1px 1px 1px 1px #000;*/
-    display: table-cell;
-    vertical-align: middle;
+    /*display: table-cell;
+    vertical-align: middle;*/
 }
 .form-list {
     margin: 0;
@@ -184,6 +188,7 @@ input{
     width: 250px;
     border-bottom: 1px solid #222;
     color: white;
+    margin-top: 27px;
 }
 input:focus { border-bottom: 1px solid white;}
 input:valid { border-bottom: 1px solid white;}
@@ -208,6 +213,10 @@ input[type=submit]{
 }
 :-ms-input-placeholder {  
    color: white;  
+}
+.warning {
+    position: absolute;
+    bottom: -35px;
 }
 /****************************************************
     underline effect
@@ -605,3 +614,22 @@ outing links
         page-break-after: avoid;
     }
 }
+
+/* ==========================================================================
+    Responsive
+   ========================================================================== */
+
+@media screen and (max-width: 850px) {
+  .form-container form{
+    width: 320px;
+  }
+  .form-container input {
+    margin-top: 0px
+  }
+  .warning {
+    bottom: -55px;
+    text-align: left;
+  }
+}
+
+
