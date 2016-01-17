@@ -27,7 +27,7 @@
                             <input  type="password" name="password" placeholder='Password' required>
                         </li>
                     </ul>
-                    <input type="submit">
+                    <input type="submit" value='submit'>
                     <p class='warning'>Cookies need to be enabled in your browser to login.</p>
                 </form>
             </div>
@@ -49,5 +49,3 @@
         </script>
     </body>
 </html>
-
-
