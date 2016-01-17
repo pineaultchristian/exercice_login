@@ -1,32 +1,45 @@
 <?php 
 
-require_once 'frontHomeLogin.php';
-require_once 'backOpenSession.php';
-require_once 'backCloseSession.php';
-require_once 'backCheckLogin.php';
+require_once 'openSession.php';
+require_once 'closeSession.php';
+require_once 'checkLogin.php';
+require_once 'validRegex.php';
 
-manageLogin();
+ob_start();
 
-function manageLogin() {
+$user = $_POST['user'];
+$password = $_POST['password'];
+
+    if ((empty($_POST['user'])) || (empty($_POST['password']))) {
+        //$error = 'Erreur de connexion : Vous devez remplir tous les champs.';
+        
+        header("Location: error.php");
+    }
+
+    elseif (!checkUser($user)) {
+        //$error = 'Erreur de connexion : caractère illégal dans le nom d\'utilisateur.';
+        
+        header("Location: error.php");
+    }
     
-    $user = (string) $_POST["username"];
-    $password = (string) $_POST["password"];
+    elseif (!checkPassword($password)) {
+        //$error = 'Erreur de connexion : caractère illégal dans le mot de passe.';
+        
+        header("Location: error.php");
+    }
     
-    if (checkLogin($user, $password)) {
+    elseif (!checkLogin($user,$password)) {
+        //$error = 'Mauvais nom d\'utilisateur ou mot de passe';
         
-        createSession();
-        
-        if (checkCookie()) {
-            header ("Location: frontLogin1.php");
-        }
-        
-        else {
-            closeSession();
-        }
+        header("Location: error.php");
     }
     
     else {
-        echo 'Username and/or password incorrect. Please try again.';
+        
+        createSession(getFirstName($user));
+        header ("Location: index.php");
+        
     }
-}
- ?>
+    
+ob_flush();
+?>
