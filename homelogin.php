@@ -12,22 +12,24 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
     <body>
-        <div class="main-container">
-            <div class="form-container">
-                <h1>Please Login</h1>
-                    <form action="middleLogin.php" method="post">
-                        <ul class='form-list'>
-                            <li class='sliding-middle-out'>
-                            	<input type="text" name="user" placeholder='Username' required>
-							</li>
-                            <li class='sliding-middle-out'>
-                            	<input type="password" name="password" placeholder='Password' required>
-                            </li>
-                        </ul>
-                        <input type="submit">
-                    </form>
-       	            <p>Cookies need to be enabled in your browser to login.</p>
-       	            <p>Allowed characters: numbers, letters and underscores.</p>
+			<div class="main-container">
+					<div class="form-container">
+							<form action="middleLogin.php" method="post">
+									<h1>Please Login</h1>
+									<ul class='form-list'>
+											<li class='sliding-middle-out'>
+													<input  type="text" name="username" placeholder='Username' required>
+											</li>
+											<li class='sliding-middle-out'>
+													<input  type="password" name="password" placeholder='Password' required>
+											</li>
+									</ul>
+									<input type="submit" value='submit'>
+									<div class="warning">
+										<p class='warning-text'>Cookies need to be enabled in your browser to login.</p>
+										<p class='warning-text'>Allowed characters: numbers, letters and underscores.</p>
+									</div>
+							</form>
+					</div>
 			</div>
-		</div>
 	</body>

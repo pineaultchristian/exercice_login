@@ -95,10 +95,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-html { 
+html {
   width: 100%;
   height: 100%;
-  /* background: url('../img/El-Capitan-Mac.jpg') no-repeat center center fixed; 
+  /* background: url('../img/El-Capitan-Mac.jpg') no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -107,15 +107,15 @@ html {
 body {
     width: 100%;
     height: 100%;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
-     
+
 }
 
 .main-container{
     position: fixed;
     display: table;
-     background: url('../img/El-Capitan-Mac.jpg') no-repeat center center fixed; 
+     background: url('../img/El-Capitan-Mac.jpg') no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -140,7 +140,7 @@ h1 {
     top: 7px;
     width: 100%;
     text-align: center;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
 }
 p {
@@ -206,17 +206,18 @@ input[type=submit]{
    color: white;
 }
 :-moz-placeholder { /* Firefox 18- */
-   color: white;  
+   color: white;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: white;  
+   color: white;
 }
-:-ms-input-placeholder {  
-   color: white;  
+:-ms-input-placeholder {
+   color: white;
 }
 .warning {
     position: absolute;
-    bottom: -35px;
+    bottom: -65px;
+    text-align: left;
 }
 /****************************************************
     underline effect
@@ -250,7 +251,7 @@ input[type=submit]{
 .main-container.home {
     display: table;
      position: fixed;
-     background: url('../img/El-Capitan-Mac.jpg') no-repeat center center fixed; 
+     background: url('../img/El-Capitan-Mac.jpg') no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -282,7 +283,7 @@ input[type=submit]{
 .main-container.page1 {
     display: table;
      position: fixed;
-     background: url('../img/mountains.jpg') no-repeat center center fixed; 
+     background: url('../img/mountains.jpg') no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -293,7 +294,7 @@ input[type=submit]{
 .main-container.page2 {
     display: table;
      position: fixed;
-     background: url('../img/leaf.jpg') no-repeat center center fixed; 
+     background: url('../img/leaf.jpg') no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -356,7 +357,7 @@ outing links
     margin: 20px;
     /*padding: 5px 10px;*/
 }
-    
+
 .link-button:hover {
     color: blue;
     background: white;
@@ -398,12 +399,12 @@ outing links
        -moz-transition: all 400ms ease;
         -ms-transition: all 400ms ease;
             transition: all 400ms ease;
-    
+
     -webkit-transform-origin: 50% 0%;
        -moz-transform-origin: 50% 0%;
         -ms-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
-    
+
     -webkit-transform-style: preserve-3d;
        -moz-transform-style: preserve-3d;
         -ms-transform-style: preserve-3d;
@@ -428,7 +429,7 @@ outing links
     white-space: nowrap;
 
     color: blue;
-    background: white; 
+    background: white;
 
     -webkit-transform-origin: 50% 0%;
        -moz-transform-origin: 50% 0%;
@@ -627,9 +628,7 @@ outing links
     margin-top: 0px
   }
   .warning {
-    bottom: -55px;
+    bottom: -110px;
     text-align: left;
   }
 }
-
-
